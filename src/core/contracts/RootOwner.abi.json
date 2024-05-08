@@ -1,0 +1,126 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"rt","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setRoot",
+			"inputs": [
+				{"name":"rt","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "send",
+			"inputs": [
+				{"name":"rcpt","type":"address"},
+				{"name":"flags","type":"uint16"},
+				{"name":"amnt","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "killContract",
+			"inputs": [
+				{"name":"to","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"},
+				{"name":"gas","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployWallet",
+			"inputs": [
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"},
+				{"name":"gasDonate","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mint",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"},
+				{"name":"gas","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "takeSurplusGas",
+			"inputs": [
+				{"name":"gas","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setBurnPaused",
+			"inputs": [
+				{"name":"paused","type":"bool"},
+				{"name":"gas","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployWalletCallback",
+			"inputs": [
+				{"name":"newWallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setBurnPausedCallback",
+			"inputs": [
+				{"name":"paused","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "root",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"root","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"randomNonce_","type":"uint256"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"randomNonce_","type":"uint256"},
+		{"name":"root","type":"address"}
+	]
+}

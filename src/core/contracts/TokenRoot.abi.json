@@ -1,0 +1,188 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"burnPaused","type":"bool"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployWallet",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "burnPaused",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "setBurnPaused",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"paused","type":"bool"}
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "name",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "symbol",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "decimals",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint8"}
+			]
+		},
+		{
+			"name": "totalSupply",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "walletCode",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"cell"}
+			]
+		},
+		{
+			"name": "rootOwner",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "walletOf",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "mint",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptBurn",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"burnflags","type":"uint64"},
+				{"name":"ownerPK","type":"uint256"},
+				{"name":"ownerAddr","type":"address"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendSurplusGas",
+			"inputs": [
+				{"name":"to","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"name_","type":"string"},
+		{"key":2,"name":"symbol_","type":"string"},
+		{"key":3,"name":"decimals_","type":"uint8"},
+		{"key":4,"name":"rootOwner_","type":"address"},
+		{"key":5,"name":"walletCode_","type":"cell"},
+		{"key":6,"name":"randomNonce_","type":"uint256"},
+		{"key":7,"name":"deployer_","type":"address"}
+	],
+	"events": [
+		{
+			"name": "EventBurn",
+			"inputs": [
+				{"name":"_from","type":"address"},
+				{"name":"_value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"name_","type":"string"},
+		{"name":"symbol_","type":"string"},
+		{"name":"decimals_","type":"uint8"},
+		{"name":"rootOwner_","type":"address"},
+		{"name":"walletCode_","type":"cell"},
+		{"name":"totalSupply_","type":"uint128"},
+		{"name":"burnPaused_","type":"bool"},
+		{"name":"randomNonce_","type":"uint256"},
+		{"name":"deployer_","type":"address"}
+	]
+}

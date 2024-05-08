@@ -1,0 +1,188 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destroy",
+			"inputs": [
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "burn",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"flags","type":"uint64"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "balance",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "ownerAddr",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "ownerPK",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "root",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "isService",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "feeThreshold",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "tokenFees",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "walletCode",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"cell"}
+			]
+		},
+		{
+			"name": "deployWallet",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"},
+				{"name":"deployDonation","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "transfer",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"rcpSrvc","type":"bool"},
+				{"name":"rcpOwnerPK","type":"uint256"},
+				{"name":"rcpOwnerAddr","type":"address"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptTransfer",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"serviceflags","type":"uint64"},
+				{"name":"senderPK","type":"uint256"},
+				{"name":"senderAddr","type":"address"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptMint",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"root_","type":"address"},
+		{"key":2,"name":"ownerPK_","type":"uint256"},
+		{"key":3,"name":"ownerAddr_","type":"address"},
+		{"key":4,"name":"isService_","type":"bool"}
+	],
+	"events": [
+		{
+			"name": "EventTransfer",
+			"inputs": [
+				{"name":"_from","type":"address"},
+				{"name":"_to","type":"address"},
+				{"name":"_value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "EventMint",
+			"inputs": [
+				{"name":"_to","type":"address"},
+				{"name":"_value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"root_","type":"address"},
+		{"name":"ownerPK_","type":"uint256"},
+		{"name":"ownerAddr_","type":"address"},
+		{"name":"isService_","type":"bool"},
+		{"name":"balance_","type":"uint128"},
+		{"name":"fees_","type":"uint128"}
+	]
+}
